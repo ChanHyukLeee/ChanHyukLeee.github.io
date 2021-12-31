@@ -1,3 +1,20 @@
+---
+title:  "cost function and parameter learning"
+excerpt: "앤드류 응 교수님 코세라 강의에서 발췌 "
+
+categories:
+  - Machine Learning
+tags:
+  - [Machine Learning]
+
+toc: true
+toc_sticky: true
+ 
+date: 2021-12-28
+last_modified_at: 2020-12-31
+---
+
+
 # cost function and parameter learning
 
 - Notation
