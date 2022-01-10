@@ -39,7 +39,7 @@ last_modified_at: 2020-12-31
     
     → minimize of (h(x) - y)^2 : squared error function
     
-    ![Untitled](cost%20function%20and%20parameter%20learning%2016ac5cd0023c4e0b9ff400374608b59b/Untitled.png)
+    ![Untitled](./img/jacobian.png)
     
     J(cost function)를 가장 작게 만드는 a,b 찾기
     
@@ -53,7 +53,7 @@ last_modified_at: 2020-12-31
     
     simultaneous update
     
-    ![Untitled](cost%20function%20and%20parameter%20learning%2016ac5cd0023c4e0b9ff400374608b59b/Untitled%201.png)
+    ![Untitled](./img/gradient.png)
     
     알파가 너무 작으면 gradient descent slow
     

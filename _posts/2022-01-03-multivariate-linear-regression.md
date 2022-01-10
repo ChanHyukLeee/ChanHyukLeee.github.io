@@ -10,29 +10,32 @@ tags:
 toc: true
 toc_sticky: true
  
-date: 2022-01-03
-last_modified_at: 2022-01-03
+date: 2022-01-10
+last_modified_at: 2022-01-10
 ---
 
 1. notation
     
     n = number of features
     
-    $x^i$ = i번째 example 의 feature vector : [1,2,3,4]
+    $\x^i$ = i번째 example 의 feature vector : [1,2,3,4]
     
-    $(x_j)^i$ = $x^i$의 j번째
+    $(\x_j)^i$ = $\x^i$의 j번째
     
-    $h(x) = a + bx + cx^2 + dx^3 + ex^4$
+    $$ h(x) = a + bx + cx_2 + dx_3 + ex_4 $$
     
-     = Transpose(theta) * x (내적) (x0 = 1인 경우 일 때)
+     = $$ h_\theta(x) = \theta^Tx = \theta_0 + \theta_1 x_1$$ (x0 = 1인 경우 일 때)
     
-    ![Untitled](multivariate%20linear%20regression%20bc2139cebca8437dbb251dbdda5b3823/Untitled.png)
+    ![Untitled](./img/theta.png)
     
 
 2. gradient descent for multiple variables
-    
-    ![Untitled](multivariate%20linear%20regression%20bc2139cebca8437dbb251dbdda5b3823/Untitled%201.png)
-    
+
+    $$ J(\theta) = \frac{1}{2m} \sum_{i=1}^m \left( h_{\theta}(x^{(i)}) - y^{(i)}\right)^2$$
+
+    $$ \theta_j = \theta_j - \alpha \frac{1}{m} \sum_{i=1}^m \left( h_\theta(x^{(i)}) - y^{(i)}\right)x_j^{(i)} \qquad \text{simultaneously update } \theta_j \text{ for all } j$$
+
+    연속적으로 $\theta_j$를 업데이트 해서 gradient descent를 진행한다.
 
 3. feature scaling
     
@@ -42,9 +45,8 @@ last_modified_at: 2022-01-03
     
     - mean normalization
         
-        $(x- average value) / range(max-min or standard derivation)$
+        $$\frac{(\x-\text{ average value})}{\text{range(max-min or standard derivation)}}$$
         
-        ![Untitled](multivariate%20linear%20regression%20bc2139cebca8437dbb251dbdda5b3823/Untitled%202.png)
         
 
 4. learning rate
@@ -76,7 +78,7 @@ last_modified_at: 2022-01-03
         
         → 편미분하면 모든 1...n까지 theta 값 구할 수 있음
         
-        ![Untitled](multivariate%20linear%20regression%20bc2139cebca8437dbb251dbdda5b3823/Untitled%203.png)
+        $$ \theta = \left( X^T X\right)^{-1} X^T\vec{y}$$
         
         feature scaling, 알파, iteration필요 없음
         
